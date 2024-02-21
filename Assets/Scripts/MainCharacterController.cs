@@ -202,6 +202,7 @@ public class MainCharacterController : MonoBehaviour
         _rigidbody.useGravity = true;
         _hook = false;
         _isHooked = false;
+        _currentSpeed = _initSpeed;
     }
     private void FixedUpdate()
     {
@@ -247,12 +248,13 @@ public class MainCharacterController : MonoBehaviour
                         _isRunning = true;
                         _animator.SetBool("isRunning", true);
                     }
-                    if (_isRunning && (_vel.x == 0 && _vel.z == 0) || _aim)
+                    if ((_isRunning && (_vel.x == 0 && _vel.z == 0)) || _aim)
                     {
                         _isRunning = false;
                         _animator.SetBool("isRunning", false);
                         _currentSpeed = _initSpeed;
                     }
+                    // --- 
                     #endregion Player Movements ends -
                 }
                 else
@@ -270,6 +272,7 @@ public class MainCharacterController : MonoBehaviour
                         }
                         _rigidbody.useGravity = false;
                         transform.position = Vector3.MoveTowards(transform.position, (Vector3)_hookTargetPosition, step);
+                        
                     }
                     #endregion Hooking system ends -
                 }
@@ -284,8 +287,26 @@ public class MainCharacterController : MonoBehaviour
                 // Rotate the player to face the direction of movement
                 if (moveDirection != Vector3.zero)
                 {
+                    // --- ANIMATION ---
+                    if (!_isRunning)
+                    {
+                        _isRunning = true;
+                        _animator.SetBool("isRunning", true);
+                    }
+                    // ---
+
                     Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
                     transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+                } else
+                {
+                    // --- ANIMATION ---
+                    if (_isRunning)
+                    {
+                        _isRunning = false;
+                        _animator.SetBool("isRunning", false);
+                        _currentSpeed = _initSpeed;
+                    }
+                    // ---
                 }
                 #endregion Wall Walking System End
             }
@@ -298,17 +319,21 @@ public class MainCharacterController : MonoBehaviour
             if (_dump)
             {
                 _dump = false;
+                ResetPhysics();
                 DumpFallBack();
             }
+            ResetPhysics();
         }
         if (collision.gameObject.CompareTag("Wall"))
         {
-            if (_isHooked == false)
+            if (_isHooked == false && _hook)
             {
                 _rigidbody.velocity = new Vector3(0,0,0);
                 _hook = false;
                 _isHooked = true;
                 transform.position = (Vector3)_hookTargetPosition;
+                _currentSpeed = _initSpeed;
+                _animator.SetBool("isRunning", true);
             }
         }
     }
@@ -319,7 +344,7 @@ public class MainCharacterController : MonoBehaviour
             if (_isHooked == true)
             {
                 Debug.Log("Exit from Wall");
-                ResetPhysics();
+                _currentSpeed = _initSpeed;
                 Dump();
             }
         }

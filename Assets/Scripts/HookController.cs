@@ -17,8 +17,11 @@ public class HookController : MonoBehaviour
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
 
+        // Define the layer mask for the "Wall" layer
+        int layerMask = 1 << LayerMask.NameToLayer("Wall");
+
         // Cast the ray and check if it hits an object
-        if (Physics.Raycast(ray, out hit, rayLength))
+        if (Physics.Raycast(ray, out hit, rayLength, layerMask))
         {
             // Output the name of the object detected in front of the player
             Debug.Log("Detected object: " + hit.collider.gameObject.name);
