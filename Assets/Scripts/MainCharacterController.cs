@@ -291,7 +291,7 @@ public class MainCharacterController : MonoBehaviour
                     if (!_isRunning)
                     {
                         _isRunning = true;
-                        _animator.SetBool("isRunning", true);
+                        _animator.SetBool("isWallRunning", true);
                     }
                     // ---
 
@@ -303,7 +303,7 @@ public class MainCharacterController : MonoBehaviour
                     if (_isRunning)
                     {
                         _isRunning = false;
-                        _animator.SetBool("isRunning", false);
+                        _animator.SetBool("isWallRunning", false);
                         _currentSpeed = _initSpeed;
                     }
                     // ---
@@ -333,7 +333,7 @@ public class MainCharacterController : MonoBehaviour
                 _isHooked = true;
                 transform.position = (Vector3)_hookTargetPosition;
                 _currentSpeed = _initSpeed;
-                _animator.SetBool("isRunning", true);
+                _animator.SetBool("isWallRunning", true);
             }
         }
     }
