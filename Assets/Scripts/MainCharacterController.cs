@@ -160,8 +160,8 @@ public class MainCharacterController : MonoBehaviour
         moveCamera.SetActive(false);
         aimCamera.SetActive(true);
         aimTargetObj.SetActive(true);
-        _animator.SetBool("isWallRunning", false);
-        _animator.SetBool("isRunning", false);
+        //_animator.SetBool("isWallRunning", false);
+        //_animator.SetBool("isRunning", false);
 
     }
     private void NotAim()
@@ -183,7 +183,7 @@ public class MainCharacterController : MonoBehaviour
         {
             _hook = false;
         }
-        _animator.SetBool("isRunning", false);
+        //_animator.SetBool("isRunning", false);
     }
 
     private void OnEnable()
@@ -210,8 +210,14 @@ public class MainCharacterController : MonoBehaviour
     {
         if (_countJump < _maxJumps)
         {
-            ResetPhysics();
             _countJump++;
+            if (_countJump == 2)
+            {
+                int randomDoubleJumpAnim = Random.Range(1, 3);
+                _animator.SetInteger("DoubleJump", randomDoubleJumpAnim);
+                StartCoroutine(ResetDoubleJumpAnimation());
+            }
+            ResetPhysics();
             _rigidbody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
 
             _isOnAir = true;
@@ -222,6 +228,7 @@ public class MainCharacterController : MonoBehaviour
     private void Dump()
     {
         _dump = true;
+        _animator.SetTrigger("Dump");
         _rigidbody.AddForce(Vector3.down * _jumpForce * 1.1f, ForceMode.Impulse);
     }
     private void DumpFallBack()
@@ -233,7 +240,7 @@ public class MainCharacterController : MonoBehaviour
         _rigidbody.useGravity = true;
         _hook = false;
         _isHooked = false;
-        _animator.SetBool("isWallRunning", false);
+        //_animator.SetBool("isWallRunning", false);
     }
     private void FixedUpdate()
     {
@@ -290,12 +297,16 @@ public class MainCharacterController : MonoBehaviour
                     if (!_isRunning && (_vel.x != 0 || _vel.z != 0) && !_aim && !_isOnAir)
                     {
                         _isRunning = true;
-                        _animator.SetBool("isRunning", true);
+                        //_animator.SetBool("isRunning", true);
                     }
                     if ((_isRunning && (_vel.x == 0 && _vel.z == 0)) || _aim)
                     {
                         _isRunning = false;
-                        _animator.SetBool("isRunning", false);
+                        //_animator.SetBool("isRunning", false);
+                        if (_currentSpeed >= (_initSpeed + 3f))
+                        {
+                            _currentSpeed -= 3f;
+                        }
                     }
                     // --- 
                     #endregion Player Movements ends -
@@ -335,7 +346,7 @@ public class MainCharacterController : MonoBehaviour
                     if (!_isRunning)
                     {
                         _isRunning = true;
-                        _animator.SetBool("isWallRunning", true);
+                        //ator.SetBool("isWallRunning", true);
                     }
                     // ---
 
@@ -347,7 +358,7 @@ public class MainCharacterController : MonoBehaviour
                     if (_isRunning)
                     {
                         _isRunning = false;
-                        _animator.SetBool("isWallRunning", false);
+                        //_animator.SetBool("isWallRunning", false);
                     }
                     // ---
                 }
@@ -378,7 +389,7 @@ public class MainCharacterController : MonoBehaviour
                 _isHooked = true;
                 transform.position = (Vector3)_hookTargetPosition;
                 _currentSpeed = _initSpeed;
-                _animator.SetBool("isWallRunning", true);
+                //_animator.SetBool("isWallRunning", true);
 
                 ResetJumpCount();
                 _isOnAir = false;
@@ -415,5 +426,11 @@ public class MainCharacterController : MonoBehaviour
         yield return new WaitForSeconds(_jumpForceLimitControllerTimer);
         //_rigidbody.AddForce(Vector3.down * _jumpForceLimitController, ForceMode.Impulse);
         
+    }
+    // Reset Anim State
+    private IEnumerator ResetDoubleJumpAnimation()
+    {
+        yield return new WaitForSeconds(0.1f);
+        _animator.SetInteger("DoubleJump", 0);
     }
 }
