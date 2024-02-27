@@ -102,6 +102,18 @@ public class MainCharacterController : MonoBehaviour
     private bool _hook;
 
     [SerializeField]
+    private bool _canPerformHook;
+
+    [SerializeField]
+    private float _timerStartMovementToTarget;
+
+    [SerializeField]
+    private float _timerResetCanPerformHook;
+
+    [SerializeField]
+    private GameObject _hookLongTentacle;
+
+    [SerializeField]
     private HookController hookController;
 
     [SerializeField]
@@ -123,6 +135,9 @@ public class MainCharacterController : MonoBehaviour
         _aim = false;
         _hook = false;
         _isHooked = false;
+        _canPerformHook = true;
+
+        _timerStartMovementToTarget = 0f;
 
         _countJump = 0;
 
@@ -174,16 +189,23 @@ public class MainCharacterController : MonoBehaviour
     }
     private void Hook()
     {
-        _hookTargetPosition = null;
-        _hookTargetPosition = hookController.HookCheck();
-        if (_hookTargetPosition != null)
+        if (_canPerformHook)
         {
-            _hook = true;
-        } else
-        {
-            _hook = false;
+            _hookTargetPosition = null;
+            _hookTargetPosition = hookController.HookCheck();
+            if (_hookTargetPosition != null)
+            {
+                _hook = true;
+                _hookLongTentacle.SetActive(true);
+                StartCoroutine(ResetCanPerformHook());
+
+            }
+            else
+            {
+                _hook = false;
+            }
+            //_animator.SetBool("isRunning", false);
         }
-        //_animator.SetBool("isRunning", false);
     }
 
     private void OnEnable()
@@ -318,15 +340,13 @@ public class MainCharacterController : MonoBehaviour
                     {
                         // Move our position a step closer to the target.
                         float step = _currentSpeed * Time.deltaTime; // Calculate distance to move
-                                                                     // Gradually increase the speed until it reaches the maxSpeed.
-                        if (_currentSpeed < _hookMaxSpeed)
-                        {
-                            _currentSpeed += _acceleration * Time.fixedDeltaTime;
-                            _currentSpeed = Mathf.Min(_currentSpeed, _hookMaxSpeed);
-                        }
+                        _timerStartMovementToTarget += 1 * Time.deltaTime;
                         _rigidbody.useGravity = false;
-                        transform.position = Vector3.MoveTowards(transform.position, (Vector3)_hookTargetPosition, step);
-
+                        if (_timerStartMovementToTarget >= 0.7f)
+                        {
+                            _currentSpeed = _hookMaxSpeed;
+                            transform.position = Vector3.MoveTowards(transform.position, (Vector3)_hookTargetPosition, step);
+                        }
                     }
                     #endregion Hooking system ends -
                 }
@@ -432,5 +452,13 @@ public class MainCharacterController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         _animator.SetInteger("DoubleJump", 0);
+    }
+
+    // Reset Can Perform Hook
+    private IEnumerator ResetCanPerformHook()
+    {
+        yield return new WaitForSeconds(_timerResetCanPerformHook);
+        _canPerformHook = true;
+        _timerStartMovementToTarget = 0.0f;
     }
 }
