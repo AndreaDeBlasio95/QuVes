@@ -195,9 +195,12 @@ public class MainCharacterController : MonoBehaviour
             _hookTargetPosition = hookController.HookCheck();
             if (_hookTargetPosition != null)
             {
+                _rigidbody.useGravity = false;
+                Vector3 newVelocity = _rigidbody.velocity * 0.5f; // Reduce the velocity by half
+                _rigidbody.velocity = newVelocity;                // Set the new velocity
                 _hook = true;
                 _hookLongTentacle.SetActive(true);
-                StartCoroutine(ResetCanPerformHook());
+                StartCoroutine(ResetCanPerformHookAutomatically());
 
             }
             else
@@ -232,6 +235,7 @@ public class MainCharacterController : MonoBehaviour
     {
         if (_countJump < _maxJumps)
         {
+            //ResetCanPerformHookManually();
             _countJump++;
             if (_countJump == 2)
             {
@@ -455,9 +459,14 @@ public class MainCharacterController : MonoBehaviour
     }
 
     // Reset Can Perform Hook
-    private IEnumerator ResetCanPerformHook()
+    private IEnumerator ResetCanPerformHookAutomatically()
     {
         yield return new WaitForSeconds(_timerResetCanPerformHook);
+        _canPerformHook = true;
+        _timerStartMovementToTarget = 0.0f;
+    }
+    private void ResetCanPerformHookManually()
+    {
         _canPerformHook = true;
         _timerStartMovementToTarget = 0.0f;
     }
