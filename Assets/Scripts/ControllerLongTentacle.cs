@@ -20,7 +20,7 @@ public class ControllerLongTentacle : MonoBehaviour
     // Reset Can Perform Hook
     private IEnumerator DeactiveObject()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.0f);
         gameObject.SetActive(false);
     }
 }
