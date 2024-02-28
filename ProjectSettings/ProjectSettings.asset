@@ -806,7 +806,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: DREAMTECK_SPLINES
+    Android: DREAMTECK_SPLINES;CHROMA_URP;CHROMA_SG
     Standalone: DREAMTECK_SPLINES
   additionalCompilerArguments: {}
   platformArchitecture: {}
