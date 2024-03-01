@@ -205,7 +205,7 @@ Material:
     - _ColorShadow: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _ColorShadows: {r: 0.5471698, g: 0.37346402, b: 0.26584196, a: 1}
     - _DetailMapColor: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 4.9245777, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 0.018154537, g: 0.018154537, b: 0.018154537, a: 1}
     - _FlatRimColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlatSpecularColor: {r: 2, g: 0.8465355, b: 0.9820418, a: 1}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
