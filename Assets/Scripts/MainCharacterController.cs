@@ -415,9 +415,10 @@ public class MainCharacterController : MonoBehaviour
                 _currentSpeed = _initSpeed;
                 //_animator.SetBool("isWallRunning", true);
 
-                ResetJumpCount();
                 _isOnAir = false;
             }
+
+            ResetJumpCount();
         }
     }
     private void OnTriggerExit(Collider other)

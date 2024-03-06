@@ -10,17 +10,24 @@ public class ControllerLongTentacle : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
+        _animator.SetBool("Reset", false);
         _animator.enabled = true;
     }
     public void DeactiveFromOutsideObject ()
     {
-        StartCoroutine(DeactiveObject());
+        StartCoroutine(ResetAnimation());
     }
 
     // Reset Can Perform Hook
+    private IEnumerator ResetAnimation()
+    {
+        yield return new WaitForSeconds(0.5f);
+        _animator.SetBool("Reset", true);
+        StartCoroutine(DeactiveObject());
+    }
     private IEnumerator DeactiveObject()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
         gameObject.SetActive(false);
     }
 }
