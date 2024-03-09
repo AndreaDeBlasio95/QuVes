@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d1467ece6b1f541bd20d2238099516, type: 3}
+  m_Name: Sign007
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 9ec903c788f81a1449967b3bf64d2172, type: 3}
+  blend: 0
+  albedoTexture: {fileID: 2800000, guid: e9671d5ceaf87524788b9fa89503722a, type: 3}
+  opacityTexture: {fileID: 2800000, guid: f47bcd3b2bd0f9c4cb7f06635236b29c, type: 3}
+  normalTexture: {fileID: 2800000, guid: 1a283a9bb361c5c458480e0cfa8ec492, type: 3}
+  metallicTexture: {fileID: 2800000, guid: d1f626e3b86768c4b97ae43fe1119389, type: 3}
+  occlusionTexture: {fileID: 0}
+  smoothnessTexture: {fileID: 2800000, guid: 411117453322b3743864a15ff40b5d5b, type: 3}
+  emissionTexture: {fileID: 0}
+  heightTexture: {fileID: 0}
+  replaceOpacityTexture: {fileID: 2800000, guid: 099da4c8c90ca7e4baf31494537ccc89,
+    type: 3}
+  normalStrength: 1
+  metallicStrength: 1
+  occlusionStrength: 1
+  smoothnessStrength: 1
+  emissionStrength: 1
+  heightStrength: 1

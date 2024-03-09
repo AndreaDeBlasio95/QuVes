@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0c5fd54a3ec6e49b95261b1cf30702, type: 3}
+  m_Name: Stone_Path_001
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 4662046cc97754a41b8a1a951dc530e5, type: 3}
+  blend: 0
+  albedoTexture: {fileID: 2800000, guid: 5eab71449d31c6e489ea1a8662c45cb0, type: 3}
+  opacityTexture: {fileID: 0}
+  normalTexture: {fileID: 2800000, guid: 73901616f11ef484690222673c071df2, type: 3}
+  metallicTexture: {fileID: 2800000, guid: 4b85f6d1a5bb73443ab3b64693c3b00e, type: 3}
+  occlusionTexture: {fileID: 2800000, guid: a6f2ee4c55adee54a8093f8bfbad766e, type: 3}
+  smoothnessTexture: {fileID: 2800000, guid: 9ac85096632e0ad43bee252074fb1cb5, type: 3}
+  emissionTexture: {fileID: 0}
+  heightTexture: {fileID: 0}
+  replaceOpacityTexture: {fileID: 2800000, guid: 099da4c8c90ca7e4baf31494537ccc89,
+    type: 3}
+  normalStrength: 1
+  metallicStrength: 1
+  occlusionStrength: 1
+  smoothnessStrength: 1
+  emissionStrength: 1
+  heightStrength: 1
+  tilingScale: 1
+  tilingStrength: 1
+  tilingTransition: 10

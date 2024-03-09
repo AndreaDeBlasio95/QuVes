@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0c5fd54a3ec6e49b95261b1cf30702, type: 3}
+  m_Name: Metal_005
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 4822a1d6a86ee944591114ef85865005, type: 3}
+  blend: 0
+  albedoTexture: {fileID: 2800000, guid: f534c015b4d4bf046a2895d051e9f386, type: 3}
+  opacityTexture: {fileID: 0}
+  normalTexture: {fileID: 2800000, guid: 64e73c772758d8841aa9a0183befebe4, type: 3}
+  metallicTexture: {fileID: 2800000, guid: 96a362dfd36dd6549b76b612cd717175, type: 3}
+  occlusionTexture: {fileID: 2800000, guid: cea27ff7a80a7b7459cd6c0137661004, type: 3}
+  smoothnessTexture: {fileID: 2800000, guid: 5db0bc384a6b57c4f99c3a9ea82016e6, type: 3}
+  emissionTexture: {fileID: 0}
+  heightTexture: {fileID: 0}
+  replaceOpacityTexture: {fileID: 2800000, guid: 099da4c8c90ca7e4baf31494537ccc89,
+    type: 3}
+  normalStrength: 1
+  metallicStrength: 1
+  occlusionStrength: 1
+  smoothnessStrength: 1
+  emissionStrength: 1
+  heightStrength: 1
+  tilingScale: 1
+  tilingStrength: 1
+  tilingTransition: 10

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d1467ece6b1f541bd20d2238099516, type: 3}
+  m_Name: Normal_Dent
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 7c2a2ca2d3acf5d49b550ff6884a3ab1, type: 3}
+  blend: 1
+  albedoTexture: {fileID: 0}
+  opacityTexture: {fileID: 0}
+  normalTexture: {fileID: 2800000, guid: 0f0e861b696625d449576531fec4e071, type: 3}
+  metallicTexture: {fileID: 0}
+  occlusionTexture: {fileID: 0}
+  smoothnessTexture: {fileID: 0}
+  emissionTexture: {fileID: 0}
+  replaceOpacityTexture: {fileID: 0}
+  normalStrength: 1
+  metallicStrength: 1
+  occlusionStrength: 1
+  smoothnessStrength: 1
+  emissionStrength: 1

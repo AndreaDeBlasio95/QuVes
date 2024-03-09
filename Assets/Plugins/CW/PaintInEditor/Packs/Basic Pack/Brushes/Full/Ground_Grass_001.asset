@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0c5fd54a3ec6e49b95261b1cf30702, type: 3}
+  m_Name: Ground_Grass_001
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: e043f8a8bb2e34947977bc4aff9a1c15, type: 3}
+  blend: 0
+  albedoTexture: {fileID: 2800000, guid: 044ca0892f3393d449143e87af4d4743, type: 3}
+  opacityTexture: {fileID: 0}
+  normalTexture: {fileID: 2800000, guid: 7203b7fd56f5f1a498fd00e8fc7d9088, type: 3}
+  metallicTexture: {fileID: 2800000, guid: 714c0b52f12cc5d42b6d514ad7db7a8d, type: 3}
+  occlusionTexture: {fileID: 2800000, guid: 85fd5d425fd19ea4c9a5e971f454aee7, type: 3}
+  smoothnessTexture: {fileID: 2800000, guid: 55fe94da0bab7e046a2d1d7a92ff1483, type: 3}
+  emissionTexture: {fileID: 0}
+  heightTexture: {fileID: 0}
+  replaceOpacityTexture: {fileID: 2800000, guid: 099da4c8c90ca7e4baf31494537ccc89,
+    type: 3}
+  normalStrength: 0.91
+  metallicStrength: 1
+  occlusionStrength: 1
+  smoothnessStrength: 1
+  emissionStrength: 1
+  heightStrength: 1
+  tilingScale: 1
+  tilingStrength: 1
+  tilingTransition: 10

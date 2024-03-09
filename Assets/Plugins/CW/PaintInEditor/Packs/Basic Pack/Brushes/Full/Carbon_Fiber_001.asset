@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0c5fd54a3ec6e49b95261b1cf30702, type: 3}
+  m_Name: Carbon_Fiber_001
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 2da7ba0397cb92645bea22a72a529394, type: 3}
+  blend: 0
+  albedoTexture: {fileID: 2800000, guid: c06bd154d43513d4b937b9175f3b92ee, type: 3}
+  opacityTexture: {fileID: 0}
+  normalTexture: {fileID: 2800000, guid: 29658b4f2726cdc4dbe05acfe2f83baf, type: 3}
+  metallicTexture: {fileID: 2800000, guid: cbe17191c931b4a42ae2010a2d1f3f60, type: 3}
+  occlusionTexture: {fileID: 2800000, guid: 9ead229cb6d520848bcfbfbcbb4a835d, type: 3}
+  smoothnessTexture: {fileID: 2800000, guid: 469134ae212f4c0419ada0110e9748e6, type: 3}
+  emissionTexture: {fileID: 0}
+  heightTexture: {fileID: 0}
+  replaceOpacityTexture: {fileID: 2800000, guid: 099da4c8c90ca7e4baf31494537ccc89,
+    type: 3}
+  normalStrength: 1
+  metallicStrength: 1
+  occlusionStrength: 1
+  smoothnessStrength: 1
+  emissionStrength: 1
+  heightStrength: 1
+  tilingScale: 1
+  tilingStrength: 1
+  tilingTransition: 10

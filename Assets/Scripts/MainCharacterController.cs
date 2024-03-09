@@ -63,6 +63,9 @@ public class MainCharacterController : MonoBehaviour
     private float _acceleration = 5f;
 
     [SerializeField]
+    private float _deceleration = 2f;
+
+    [SerializeField]
     private float _maxSpeed = 20f;
 
     // CUSTOM MOVEMENTS
@@ -295,7 +298,7 @@ public class MainCharacterController : MonoBehaviour
                         // movement Speed
                         if (_currentSpeed > _initSpeed)
                         {
-                            _currentSpeed -= _acceleration * Time.fixedDeltaTime;
+                            _currentSpeed -= _deceleration * Time.fixedDeltaTime;
                         }
 
                         // Rigidbody

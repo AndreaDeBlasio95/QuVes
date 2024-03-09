@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d9c707633a1029e408667160c6f80933
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _CwEnvironmentTex: {fileID: 8900000, guid: 9cc3e0590d347474390b651f06445b95, type: 3}
+  - _CwBaseTex: {instanceID: 0}
+  - _CwOpacityTex: {instanceID: 0}
+  - _CwNormalTex: {instanceID: 0}
+  - _CwMetallicTex: {instanceID: 0}
+  - _CwOcclusionTex: {instanceID: 0}
+  - _CwSmoothnessTex: {instanceID: 0}
+  - _CwEmissionTex: {instanceID: 0}
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

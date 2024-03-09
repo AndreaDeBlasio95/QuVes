@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0c5fd54a3ec6e49b95261b1cf30702, type: 3}
+  m_Name: Eraser
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: ce13b5e5ee3b5a94d8cb40d23079eef7, type: 3}
+  blend: 2
+  albedoTexture: {fileID: 2800000, guid: 2898c2c4af85c194aad85dadc3a1577a, type: 3}
+  opacityTexture: {fileID: 2800000, guid: 6d5d34823a39ab04090bf98e8b3badca, type: 3}
+  normalTexture: {fileID: 2800000, guid: 1d8522a49cd558a4586edf1a2a56b9be, type: 3}
+  metallicTexture: {fileID: 2800000, guid: 6d5d34823a39ab04090bf98e8b3badca, type: 3}
+  occlusionTexture: {fileID: 2800000, guid: 6d5d34823a39ab04090bf98e8b3badca, type: 3}
+  smoothnessTexture: {fileID: 2800000, guid: 6d5d34823a39ab04090bf98e8b3badca, type: 3}
+  emissionTexture: {fileID: 2800000, guid: 6d5d34823a39ab04090bf98e8b3badca, type: 3}
+  heightTexture: {fileID: 0}
+  replaceOpacityTexture: {fileID: 0}
+  normalStrength: 1
+  metallicStrength: 1
+  occlusionStrength: 1
+  smoothnessStrength: 1
+  emissionStrength: 1
+  heightStrength: 1
+  tilingScale: 1
+  tilingStrength: 1
+  tilingTransition: 2

@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa84aca71fee79e40a6521cadd732d1a, type: 3}
+  m_Name: URP Complex Lit
+  m_EditorClassIdentifier: 
+  shaderPaths:
+  - Universal Render Pipeline/Complex Lit
+  slots:
+  - Name: _BaseMap
+    TextureProfileName: Albedo (RGB) Opacity (A)
+    Channel: 0
+    Keywords: 
+  - Name: _MetallicGlossMap
+    TextureProfileName: Metallic (R) Smoothness (A)
+    Channel: 0
+    Keywords: _METALLICSPECGLOSSMAP
+  - Name: _SpecGlossMap
+    TextureProfileName: Specular (RGB)
+    Channel: 0
+    Keywords: 
+  - Name: _BumpMap
+    TextureProfileName: Normal (RGBA)
+    Channel: 0
+    Keywords: _NORMALMAP
+  - Name: _ParallaxMap
+    TextureProfileName: Height (R)
+    Channel: 0
+    Keywords: _PARALLAXMAP
+  - Name: _OcclusionMap
+    TextureProfileName: Occlusion (G)
+    Channel: 0
+    Keywords: _OCCLUSIONMAP
+  - Name: _EmissionMap
+    TextureProfileName: Emission (RGB)
+    Channel: 0
+    Keywords: _EMISSION

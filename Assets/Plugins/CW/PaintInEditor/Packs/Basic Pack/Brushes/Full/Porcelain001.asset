@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0c5fd54a3ec6e49b95261b1cf30702, type: 3}
+  m_Name: Porcelain001
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: fa851b03181ed0e47b3ef29c257af2d4, type: 3}
+  blend: 0
+  albedoTexture: {fileID: 2800000, guid: 5ed1bb6369a6e8f43bc7b8561c03e148, type: 3}
+  opacityTexture: {fileID: 0}
+  normalTexture: {fileID: 2800000, guid: f9dc4c255f3ad6a459e70854c41dc3af, type: 3}
+  metallicTexture: {fileID: 2800000, guid: 6d5d34823a39ab04090bf98e8b3badca, type: 3}
+  occlusionTexture: {fileID: 2800000, guid: 6d5d34823a39ab04090bf98e8b3badca, type: 3}
+  smoothnessTexture: {fileID: 2800000, guid: ea09b175c1a89584a983af027f55b942, type: 3}
+  emissionTexture: {fileID: 2800000, guid: 099da4c8c90ca7e4baf31494537ccc89, type: 3}
+  heightTexture: {fileID: 2800000, guid: d9458e51c14acd640b45964ed2663dcd, type: 3}
+  replaceOpacityTexture: {fileID: 2800000, guid: 099da4c8c90ca7e4baf31494537ccc89,
+    type: 3}
+  normalStrength: 1
+  metallicStrength: 0
+  occlusionStrength: 1
+  smoothnessStrength: 1
+  emissionStrength: 1
+  heightStrength: 1
+  tilingScale: 1
+  tilingStrength: 1
+  tilingTransition: 10

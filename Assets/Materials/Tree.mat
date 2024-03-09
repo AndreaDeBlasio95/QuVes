@@ -13,8 +13,6 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - DR_CEL_EXTRA_ON
-  - DR_GRADIENT_ON
-  - DR_OUTLINE_ON
   - DR_VERTEX_COLORS_ON
   - _CELPRIMARYMODE_SINGLE
   - _DETAILMAPBLENDINGMODE_MULTIPLY
@@ -29,7 +27,8 @@ Material:
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - SRPDEFAULTUNLIT
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -138,7 +137,7 @@ Material:
     - _GradientAngle: 0
     - _GradientCenterX: 0
     - _GradientCenterY: 1
-    - _GradientEnabled: 1
+    - _GradientEnabled: 0
     - _GradientSize: 4
     - _GradientSpace: 0
     - _LightContribution: 0
@@ -148,7 +147,7 @@ Material:
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _OutlineDepthOffset: 0
-    - _OutlineEnabled: 1
+    - _OutlineEnabled: 0
     - _OutlineScale: 1
     - _OutlineSpace: 0
     - _OutlineWidth: 1
@@ -157,9 +156,9 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _RimEnabled: 0
-    - _SelfShadingSize: 0.718
+    - _SelfShadingSize: 0.65
     - _SelfShadingSizeExtra: 0.373
-    - _ShadowEdgeSize: 0.226
+    - _ShadowEdgeSize: 0
     - _ShadowEdgeSizeExtra: 0.324
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
