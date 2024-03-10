@@ -137,6 +137,11 @@ public class MainCharacterController : MonoBehaviour
     private bool _hookBoost;
     [SerializeField]
     private HookBoostController _hookBoostController;
+    public Quaternion _frozenHookBoostOrientation;
+    [SerializeField]
+    private float _hookBoostForceForward;
+    [SerializeField]
+    private float _hookBoostForceUp;
 
 
     private void Awake()
@@ -237,6 +242,13 @@ public class MainCharacterController : MonoBehaviour
             _hookBoostController.gameObject.SetActive(true);
         }
     }
+    public void HookBoostJump()
+    {
+        Debug.Log("HOOK BOOST");
+        // Apply forward and upward force
+        Vector3 jumpForce = transform.forward * _hookBoostForceForward + Vector3.up * _hookBoostForceUp;
+        _rigidbody.AddForce(jumpForce, ForceMode.Impulse);
+    }
 
     private void OnEnable()
     {
@@ -300,11 +312,13 @@ public class MainCharacterController : MonoBehaviour
         // --- MOVEMENT ---
         if (_canMove)
         {
-            if (!_isHooked)
+            if (!_hookBoost)
             {
-
                 if (!_hook)
                 {
+                    // Custom Gravity
+                    _rigidbody.AddForce(_customGravity * _rigidbody.mass, ForceMode.Acceleration);
+
                     #region Player Movements on the Ground 
                     _moveDir = _moveAction.ReadValue<Vector2>();
 
@@ -317,7 +331,8 @@ public class MainCharacterController : MonoBehaviour
                             _currentSpeed = Mathf.Min(_currentSpeed, _maxSpeed);
                         }
 
-                    } else
+                    }
+                    else
                     {
                         // movement Speed
                         if (_currentSpeed > _initSpeed)
@@ -326,7 +341,7 @@ public class MainCharacterController : MonoBehaviour
                         }
 
                         // Rigidbody
-                        _rigidbody.AddForce(_customGravity * _rigidbody.mass, ForceMode.Acceleration);
+                        //_rigidbody.AddForce(_customGravity * _rigidbody.mass, ForceMode.Acceleration);
                     }
 
                     _vel = _rigidbody.velocity;
@@ -381,41 +396,15 @@ public class MainCharacterController : MonoBehaviour
                     }
                     #endregion Hooking system ends -
                 }
-            } else
+            }
+            else
             {
-                #region Wall Walking System
-                /*
-                float input = Input.GetAxis("Vertical");
+                // Custom Gravity
+                _rigidbody.AddForce(_customGravity * _rigidbody.mass, ForceMode.Acceleration);
 
-                Vector3 moveDirection = hookController.HookedObject().transform.forward * input; // Use the wall's forward direction for movement
-                // todo: change 10 with a wall running speed
-                transform.position += moveDirection * 10 * Time.deltaTime;
-
-                // Rotate the player to face the direction of movement
-                if (moveDirection != Vector3.zero)
-                {
-                    // --- ANIMATION ---
-                    if (!_isRunning)
-                    {
-                        _isRunning = true;
-                        //ator.SetBool("isWallRunning", true);
-                    }
-                    // ---
-
-                    Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
-                    transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-                } else
-                {
-                    // --- ANIMATION ---
-                    if (_isRunning)
-                    {
-                        _isRunning = false;
-                        //_animator.SetBool("isWallRunning", false);
-                    }
-                    // ---
-                }
-                */
-                #endregion Wall Walking System End
+                #region HookBoost system - Player will receive a jump boost
+                transform.rotation = _frozenHookBoostOrientation;
+                #endregion HookBoost ends -
             }
         }
     }

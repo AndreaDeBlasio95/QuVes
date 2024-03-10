@@ -12464,6 +12464,9 @@ MonoBehaviour:
   rotationSpeed: 10
   _hookBoost: 0
   _hookBoostController: {fileID: 833122879}
+  _frozenHookBoostOrientation: {x: 0, y: 0, z: 0, w: 0}
+  _hookBoostForceForward: 150
+  _hookBoostForceUp: 120
 --- !u!4 &406667026
 Transform:
   m_ObjectHideFlags: 0

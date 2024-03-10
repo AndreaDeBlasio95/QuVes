@@ -23,12 +23,18 @@ public class HookBoostController : MonoBehaviour
         {
             hookBoostAnimators[0].gameObject.SetActive(true);
             hookBoostAnimators[1].gameObject.SetActive(true);
+
+            _mainCharacterController._frozenHookBoostOrientation = _mainCharacterController.gameObject.transform.rotation;
             _mainCharacterController.SetHookBoost(true);
         }
     }
     private IEnumerator ResetHits()
     {
         yield return new WaitForSeconds(timerResetHits);
+        if (hookBoostHits[0] == true && hookBoostHits[1] == true)
+        {
+            _mainCharacterController.HookBoostJump();
+        }
         hookBoostHits[0] = false;
         hookBoostHits[1] = false;
         hookBoostAnimators[0].gameObject.SetActive(false);
