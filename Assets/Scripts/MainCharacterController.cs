@@ -131,6 +131,14 @@ public class MainCharacterController : MonoBehaviour
     [SerializeField]
     private float rotationSpeed = 5f;
 
+    // HOOK
+    [Header("HOOK BOOST")]
+    [SerializeField]
+    private bool _hookBoost;
+    [SerializeField]
+    private HookBoostController _hookBoostController;
+
+
     private void Awake()
     {
         _canMove = true;
@@ -139,6 +147,7 @@ public class MainCharacterController : MonoBehaviour
         _hook = false;
         _isHooked = false;
         _canPerformHook = true;
+        _hookBoost = false;
 
         _timerStartMovementToTarget = 0f;
 
@@ -168,6 +177,10 @@ public class MainCharacterController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.H))
         {
             Hook();
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            HookBoost();
         }
     }
 
@@ -211,6 +224,17 @@ public class MainCharacterController : MonoBehaviour
                 _hook = false;
             }
             //_animator.SetBool("isRunning", false);
+        }
+    }
+    public void SetHookBoost (bool _value)
+    {
+        _hookBoost = _value;
+    }
+    private void HookBoost()
+    {
+        if (!_hookBoost && _hookBoostController.gameObject.activeSelf == false)
+        {
+            _hookBoostController.gameObject.SetActive(true);
         }
     }
 
@@ -360,6 +384,7 @@ public class MainCharacterController : MonoBehaviour
             } else
             {
                 #region Wall Walking System
+                /*
                 float input = Input.GetAxis("Vertical");
 
                 Vector3 moveDirection = hookController.HookedObject().transform.forward * input; // Use the wall's forward direction for movement
@@ -389,6 +414,7 @@ public class MainCharacterController : MonoBehaviour
                     }
                     // ---
                 }
+                */
                 #endregion Wall Walking System End
             }
         }

@@ -22,7 +22,7 @@ Texture2D:
   m_Name: z___Gradient_ShadingTex{"mode":0,"colorKeys":[{"color":{"r":0.4000000059604645,"g":0.7490196228027344,"b":0.7490196228027344,"a":1.0},"time":0.2500038146972656},{"color":{"r":0.653969407081604,"g":0.7736850380897522,"b":0.8301886916160584,"a":1.0},"time":0.42032501101493838},{"color":{"r":0.6745728254318237,"g":0.8773584961891174,"b":0.8773584961891174,"a":1.0},"time":0.5082474946975708},{"color":{"r":0.9882352948188782,"g":0.9960784316062927,"b":0.9960784316062927,"a":1.0},"time":0.7499961853027344}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}
   m_ImageContentsHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: 4454de6886b771da580a49c69d1900f5
   m_ForcedFallbackFormat: 4
   m_DownscaleFallback: 0
   m_IsAlphaChannelOptional: 0
@@ -70,7 +70,7 @@ Texture2D:
   m_Name: z__HeightGradientTextureTex{"mode":0,"colorKeys":[{"color":{"r":0.5283018946647644,"g":0.5283018946647644,"b":0.5283018946647644,"a":1.0},"time":0.21428243815898896},{"color":{"r":1.0,"g":0.9654088020324707,"b":0.8915094137191773,"a":1.0},"time":0.7829709053039551},{"color":{"r":0.9904923439025879,"g":0.9547656774520874,"b":0.8785154819488525,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}
   m_ImageContentsHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: a0fac2cc9783093833d09adc241a29b7
   m_ForcedFallbackFormat: 4
   m_DownscaleFallback: 0
   m_IsAlphaChannelOptional: 0
@@ -130,7 +130,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Fruit - Set 1 - Skin Lemon
-  m_Shader: {fileID: -6465566751694194690, guid: 4cf852656a995644e830df7333e1eb6e, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 4cf852656a995644e830df7333e1eb6e,
+    type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
@@ -142,10 +143,8 @@ Material:
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Opaque
-  disabledShaderPasses:
-  - SHADOWCASTER
+  stringTagMap: {}
+  disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -272,7 +271,7 @@ Texture2D:
   m_Name: z__ShadingGradientTextureTex{"mode":0,"colorKeys":[{"color":{"r":0.9716981053352356,"g":0.6663941144943237,"b":0.4170968234539032,"a":1.0},"time":0.1758297085762024},{"color":{"r":1.0,"g":0.8604575395584106,"b":0.6273584961891174,"a":1.0},"time":0.7637293338775635}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}
   m_ImageContentsHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: 7b6a7cf138519a368a3e317fbf39cb72
   m_ForcedFallbackFormat: 4
   m_DownscaleFallback: 0
   m_IsAlphaChannelOptional: 0
