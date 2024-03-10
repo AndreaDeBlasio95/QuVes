@@ -12060,7 +12060,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 376476138}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -24920,7 +24920,8 @@ MonoBehaviour:
   hookBoostAnimators:
   - {fileID: 787998221}
   - {fileID: 625818347}
-  timerResetHits: 1
+  timerResetHits: 1.2
+  _timerJumpForce: 0
 --- !u!1 &838770115
 GameObject:
   m_ObjectHideFlags: 0
@@ -51007,7 +51008,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943674242}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

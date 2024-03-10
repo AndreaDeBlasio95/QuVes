@@ -135,11 +135,15 @@ public class MainCharacterController : MonoBehaviour
     [Header("HOOK BOOST")]
     [SerializeField]
     private bool _hookBoost;
+
     [SerializeField]
     private HookBoostController _hookBoostController;
+
     public Quaternion _frozenHookBoostOrientation;
+
     [SerializeField]
     private float _hookBoostForceForward;
+
     [SerializeField]
     private float _hookBoostForceUp;
 
@@ -245,6 +249,8 @@ public class MainCharacterController : MonoBehaviour
     public void HookBoostJump()
     {
         Debug.Log("HOOK BOOST");
+        Debug.Log(transform.forward);
+        _animator.SetTrigger("HookBoost");
         // Apply forward and upward force
         Vector3 jumpForce = transform.forward * _hookBoostForceForward + Vector3.up * _hookBoostForceUp;
         _rigidbody.AddForce(jumpForce, ForceMode.Impulse);

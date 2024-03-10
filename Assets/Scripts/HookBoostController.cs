@@ -8,10 +8,13 @@ public class HookBoostController : MonoBehaviour
     public bool[] hookBoostHits;
     public Animator[] hookBoostAnimators;
     public float timerResetHits;
+    public float _timerJumpForce;
 
     // Start is called before the first frame update
     private void OnEnable()
     {
+        _timerJumpForce = timerResetHits - 0.5f;
+        StartCoroutine(JumpForce());
         StartCoroutine(ResetHits());
         hookBoostHits[0] = false;
         hookBoostHits[1] = false;
@@ -28,13 +31,17 @@ public class HookBoostController : MonoBehaviour
             _mainCharacterController.SetHookBoost(true);
         }
     }
-    private IEnumerator ResetHits()
+    private IEnumerator JumpForce()
     {
-        yield return new WaitForSeconds(timerResetHits);
+        yield return new WaitForSeconds(_timerJumpForce);
         if (hookBoostHits[0] == true && hookBoostHits[1] == true)
         {
             _mainCharacterController.HookBoostJump();
         }
+    }
+    private IEnumerator ResetHits()
+    {
+        yield return new WaitForSeconds(timerResetHits);
         hookBoostHits[0] = false;
         hookBoostHits[1] = false;
         hookBoostAnimators[0].gameObject.SetActive(false);
