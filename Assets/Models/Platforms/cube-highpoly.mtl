@@ -2,4 +2,4 @@
 # ToolType: PolyMesh3D
 # www.zbrush.com
 newmtl defaultMat
-map_Kd plat-1.bmp
+map_Kd cube-highpoly.bmp

@@ -7,11 +7,12 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Plat-2
+  m_Name: Spline Bottom
   m_Shader: {fileID: 4800000, guid: bee44b4a58655ee4cbff107302a3e131, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - DR_CEL_EXTRA_ON
   - DR_GRADIENT_ON
   - DR_VERTEX_COLORS_ON
   - _CELPRIMARYMODE_SINGLE
@@ -109,7 +110,7 @@ Material:
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
     - _CameraDistanceImpact: 0
-    - _CelExtraEnabled: 0
+    - _CelExtraEnabled: 1
     - _CelNumSteps: 3
     - _CelPrimaryMode: 1
     - _ClearCoatMask: 0
@@ -129,13 +130,13 @@ Material:
     - _FlatSpecularEdgeSmoothness: 0
     - _FlatSpecularSize: 0.1
     - _Flatness: 1
-    - _FlatnessExtra: 1
+    - _FlatnessExtra: 0.45
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _GradientAngle: 0
     - _GradientCenterX: 0
-    - _GradientCenterY: -10.8
+    - _GradientCenterY: -10
     - _GradientEnabled: 1
     - _GradientSize: 8
     - _GradientSpace: 0
@@ -156,9 +157,9 @@ Material:
     - _ReceiveShadows: 1
     - _RimEnabled: 0
     - _SelfShadingSize: 0.883
-    - _SelfShadingSizeExtra: 0.6
+    - _SelfShadingSizeExtra: 0.82
     - _ShadowEdgeSize: 0.13
-    - _ShadowEdgeSizeExtra: 0.05
+    - _ShadowEdgeSizeExtra: 0
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularEnabled: 0
@@ -179,9 +180,9 @@ Material:
     m_Colors:
     - _BaseColor: {r: 0.5254902, g: 0.6392157, b: 0.8313726, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorDim: {r: 0.4156863, g: 0.5411765, b: 0.7725491, a: 1}
+    - _ColorDim: {r: 0.32156864, g: 0.46274513, b: 0.7294118, a: 1}
     - _ColorDimCurve: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
-    - _ColorDimExtra: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
+    - _ColorDimExtra: {r: 0.5254902, g: 0.6392157, b: 0.8313726, a: 1}
     - _ColorDimSteps: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
     - _ColorGradient: {r: 0.058485348, g: 0.10077815, b: 0.23389192, a: 1}
     - _DetailMapColor: {r: 1, g: 1, b: 1, a: 1}
