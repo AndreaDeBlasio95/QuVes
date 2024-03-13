@@ -136,9 +136,9 @@ Material:
     - _GlossyReflections: 0
     - _GradientAngle: 0
     - _GradientCenterX: 0
-    - _GradientCenterY: -2
+    - _GradientCenterY: -3
     - _GradientEnabled: 1
-    - _GradientSize: 3
+    - _GradientSize: 6
     - _GradientSpace: 0
     - _LightContribution: 0
     - _LightFalloffSize: 0
@@ -184,7 +184,7 @@ Material:
     - _ColorDimCurve: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
     - _ColorDimExtra: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
     - _ColorDimSteps: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
-    - _ColorGradient: {r: 2.7754881, g: 1.6289612, b: 0.5650533, a: 1}
+    - _ColorGradient: {r: 0.086734004, g: 0.050905038, b: 0.017657915, a: 1}
     - _DetailMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlatRimColor: {r: 0.25, g: 0.22616534, b: 0.17527553, a: 1}
