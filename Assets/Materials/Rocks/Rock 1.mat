@@ -136,9 +136,9 @@ Material:
     - _GlossyReflections: 0
     - _GradientAngle: 0
     - _GradientCenterX: 0
-    - _GradientCenterY: -3
+    - _GradientCenterY: -1.33
     - _GradientEnabled: 1
-    - _GradientSize: 6
+    - _GradientSize: 2
     - _GradientSpace: 0
     - _LightContribution: 0
     - _LightFalloffSize: 0
