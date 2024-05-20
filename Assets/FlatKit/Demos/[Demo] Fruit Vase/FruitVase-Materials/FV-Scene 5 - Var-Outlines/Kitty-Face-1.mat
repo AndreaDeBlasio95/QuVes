@@ -193,8 +193,8 @@ Material:
     - _VertexExtrusionSmoothNormals: 0
     - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 1, g: 0.6156863, b: 0.69411767, a: 1}
-    - _Color: {r: 1, g: 0.6156863, b: 0.69411767, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorCelShadow: {r: 0.49056602, g: 0.34478462, b: 0.4476891, a: 1}
     - _ColorDim: {r: 1, g: 1, b: 1, a: 0.85}
     - _ColorDimCurve: {r: 0.85, g: 0.85, b: 0.85, a: 0.85}
@@ -205,7 +205,7 @@ Material:
     - _ColorShadow: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _ColorShadows: {r: 0.5471698, g: 0.37346402, b: 0.26584196, a: 1}
     - _DetailMapColor: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0.018154537, g: 0.018154537, b: 0.018154537, a: 1}
+    - _EmissionColor: {r: 0.01886791, g: 0.01886791, b: 0.01886791, a: 1}
     - _FlatRimColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlatSpecularColor: {r: 2, g: 0.8465355, b: 0.9820418, a: 1}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
